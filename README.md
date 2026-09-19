@@ -1,9 +1,11 @@
 # homebrew-tap-fixture
 
-Non-production Homebrew tap used only for shared automation integration tests.
+Non-production destination tap for shared Homebrew automation acceptance.
 
-No production Formula or consumer should depend on this repository.
+This repository owns only fixture tap state. It does not contain product source,
+Formula specifications, reusable workflows, or publishing orchestration.
 
-The `publish acceptance` workflow requires an Actions secret named
-`HOMEBREW_TAP_TOKEN` with contents write access to this repository. The secret is
-intentionally not created by repository code.
+`jinyongp/release-fixture` is the source/product fixture. Its acceptance workflow
+uses the public `homebrew-actions` workflows to validate and publish Formula state here.
+
+No production Formula, product workflow, or end user should depend on this repository.
