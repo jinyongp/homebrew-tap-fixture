@@ -1,0 +1,25 @@
+name: publish acceptance
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    uses: jinyongp/homebrew-actions/.github/workflows/check.yml@35be652beb09d97010bfa595069684584b13854c # candidate v1.0.0
+    with:
+      formula: tap-fixture
+      tap-repository: ${{ github.repository }}
+
+  publish:
+    needs: check
+    uses: jinyongp/homebrew-actions/.github/workflows/publish.yml@35be652beb09d97010bfa595069684584b13854c # candidate v1.0.0
+    with:
+      formula: tap-fixture
+      ref: ${{ github.sha }}
+      version: 1.0.0
+      tap-repository: ${{ github.repository }}
+    secrets:
+      tap_token: ${{ github.token }}

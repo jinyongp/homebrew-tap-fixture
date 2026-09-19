@@ -1,0 +1,14 @@
+desc: Self-contained source fixture for Homebrew publish integration tests
+homepage: https://github.com/jinyongp/homebrew-tap-fixture
+license: MIT
+
+install: |
+  target = bin/"tap-fixture"
+  target.write <<~SH
+    #!/usr/bin/env sh
+    echo "tap-fixture #{version}"
+  SH
+  target.chmod 0755
+
+test: |
+  assert_match "tap-fixture #{version}", shell_output("#{bin}/tap-fixture")
