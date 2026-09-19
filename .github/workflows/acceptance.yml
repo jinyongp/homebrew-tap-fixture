@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   check:
@@ -22,4 +22,4 @@ jobs:
       version: 1.0.0
       tap-repository: ${{ github.repository }}
     secrets:
-      tap_token: ${{ github.token }}
+      tap_token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
