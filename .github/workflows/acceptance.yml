@@ -22,4 +22,4 @@ jobs:
       version: 1.0.0
       tap-repository: ${{ github.repository }}
     secrets:
-      tap_token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+      tap_token: ${{ secrets.GITHUB_TOKEN }}
