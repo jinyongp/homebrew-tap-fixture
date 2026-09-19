@@ -1,9 +1,9 @@
 class TapFixture < Formula
   desc "Self-contained source fixture for Homebrew publish integration tests"
   homepage "https://github.com/jinyongp/homebrew-tap-fixture"
-  url "https://github.com/jinyongp/homebrew-tap-fixture/archive/9c7656568081bb798bd02845ed108d261cf903b7.tar.gz"
-  version "9c7656568081"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  url "https://github.com/jinyongp/homebrew-tap-fixture/archive/fe744772763fd3d94340298a63bca73740f97683.tar.gz"
+  version "fe744772763f"
+  sha256 "302af9af43ecf79537a9255470d1a113c4b6b480747692417e5f0fa6fe71e97c"
   license "MIT"
 
   def install
